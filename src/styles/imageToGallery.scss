@@ -1,16 +1,15 @@
 .imageToGallery {
-    padding: 2px;
-    pointer-events: none;
-    min-height: 0px;
-    max-height: 160px;
-    bottom: 0px;
-    overflow: hidden;
-    background-color: blue;
+    cursor: pointer;
+    opacity: 0.5;
+    color: black;
+    position: absolute;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-.teste2 {
-    display: inline-block;
+.imageToGallery:hover {
     cursor: pointer;
-    pointer-events: visible;
-    margin: 2px;
+    opacity: 0.8;
+    color: red;
+    position: absolute;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
