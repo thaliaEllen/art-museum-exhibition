@@ -1,0 +1,16 @@
+.imageToGallery {
+    padding: 2px;
+    pointer-events: none;
+    min-height: 0px;
+    max-height: 160px;
+    bottom: 0px;
+    overflow: hidden;
+    background-color: blue;
+}
+
+.teste2 {
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: visible;
+    margin: 2px;
+}
