@@ -7,6 +7,7 @@ interface IListArt {
   height: number;
   tags?: [{ value: string; title: string }];
   caption: string;
+  generalInfo: any;
 }
 
 async function SearchArtObject(listArtIds: any) {
@@ -30,6 +31,7 @@ async function SearchArtObject(listArtIds: any) {
               : value.data.measurements[0].elementMeasurements.Height,
             tags: [{ value: "Domínio público", title: "Domínio público" }],
             caption: value.data.title,
+            generalInfo: value.data,
           });
         } else {
           listaArtObjects.push({
@@ -45,6 +47,7 @@ async function SearchArtObject(listArtIds: any) {
               ? 10
               : value.data.measurements[0].elementMeasurements.Height,
             caption: value.data.title,
+            generalInfo: value.data,
           });
         }
       })

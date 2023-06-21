@@ -8,7 +8,7 @@ import SearchArtObject from "../services/searchArtObject";
 function FilterInput(props: any) {
   const { setListArt, setLoadList } = props;
   const [filterSearch, setFilterSearch] = useState("");
-  const [typeFilterSearch, setTypeFilterSearch] = useState("");
+  const [typeFilterSearch, setTypeFilterSearch] = useState("Nome");
 
   async function filter() {
     setLoadList(true);
@@ -28,6 +28,7 @@ function FilterInput(props: any) {
         <Col lg={2}>
           <Input
             type="select"
+            value={typeFilterSearch}
             onChange={(e) => setTypeFilterSearch(e.target.value)}
             name="select"
             id="exampleSelect"
