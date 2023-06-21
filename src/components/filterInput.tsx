@@ -1,7 +1,24 @@
-import { Container, Row, Col, Input, Button, FormGroup } from "reactstrap";
-import "../styles/filterInput.scss";
+import { Container, Row, Col, Input, Button } from "reactstrap";
 
-function FilterInput() {
+import "../styles/filterInput.scss";
+import FilterArtListForTitleAndArtist from "../services/filterArtListForTitleAndArtist";
+import SearchArtObject from "../services/searchArtObject";
+
+function FilterInput(props: any) {
+  const { setListArt, setLoadList } = props;
+
+  async function filter() {
+    setLoadList(true);
+    const listArtId = await FilterArtListForTitleAndArtist(
+      false,
+      true,
+      "Van Gogh"
+    );
+    const lisArtObjects = await SearchArtObject(listArtId);
+    setListArt(lisArtObjects);
+    setLoadList(false);
+  }
+
   return (
     <Container className="containerFilter">
       <Row className="filterContainer">
@@ -16,7 +33,9 @@ function FilterInput() {
           <Input />
         </Col>
         <Col lg={1}>
-          <Button color="secondary">Procurar</Button>
+          <Button onClick={() => filter()} color="secondary">
+            Procurar
+          </Button>
         </Col>
       </Row>
     </Container>

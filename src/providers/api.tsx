@@ -1,5 +1,5 @@
 import axios from "axios";
 
-const baseURL = process.env.BASE_URL;
-
-export const Api = axios.create({ baseURL });
+export const Api = axios.create({
+  baseURL: process.env.REACT_APP_MUSEUM_BASE_URL,
+});

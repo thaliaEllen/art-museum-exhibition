@@ -1,20 +1,31 @@
-import { useState } from "react";
 import { Gallery } from "react-grid-gallery";
+import { Col, Row, Spinner } from "reactstrap";
 
-import { images as IMAGES } from "./images";
 import ImageToGallery from "./imageToGallery";
+import "../../styles/imageToGallery.scss";
 
-export default function GalleryPhotos() {
-  const [images, setImages] = useState(IMAGES);
+export default function GalleryPhotos(props: any) {
+  const { listArt, loadList } = props;
 
   return (
     <div>
-      <Gallery
-        defaultContainerWidth={300}
-        enableImageSelection={false}
-        images={images}
-        thumbnailImageComponent={ImageToGallery}
-      />
+      {loadList ? (
+        <Col>
+          <Row className="containerLoadImage">
+            <Spinner>Loading...</Spinner>
+          </Row>
+          <Row className="containerLoadImage">
+            <strong>Procurando obras de arte ...</strong>
+          </Row>
+        </Col>
+      ) : (
+        <Gallery
+          defaultContainerWidth={300}
+          enableImageSelection={false}
+          images={listArt}
+          thumbnailImageComponent={ImageToGallery}
+        />
+      )}
     </div>
   );
 }
