@@ -1,7 +1,7 @@
 import { Api } from "../providers";
 
 interface IListArt {
-  id: number;
+  key: number;
   src: string;
   width: number;
   height: number;
@@ -17,7 +17,7 @@ async function SearchArtObject(listArtIds: any) {
       .then((value) => {
         if (value.data.isPublicDomain) {
           listaArtObjects.push({
-            id: value.data.objectID,
+            key: value.data.objectID,
             src:
               value.data.primaryImage === ""
                 ? imageNotFound
@@ -33,7 +33,7 @@ async function SearchArtObject(listArtIds: any) {
           });
         } else {
           listaArtObjects.push({
-            id: value.data.objectID,
+            key: value.data.objectID,
             src:
               value.data.primaryImage === ""
                 ? imageNotFound
