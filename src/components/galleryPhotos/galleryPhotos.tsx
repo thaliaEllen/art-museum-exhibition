@@ -5,7 +5,6 @@ import { Col, Row, Spinner } from "reactstrap";
 import ImageToGallery from "./imageToGallery";
 
 import "../../styles/imageToGallery.scss";
-import ModalArtInformation from "../modalArtInformation/modalArtInformation";
 
 export default function GalleryPhotos(props: any) {
   const { listArt, loadList } = props;
@@ -18,7 +17,7 @@ export default function GalleryPhotos(props: any) {
             <Spinner>Loading...</Spinner>
           </Row>
           <Row className="containerLoadImage">
-            <strong>Procurando obras de arte ...</strong>
+            <strong className="textLoad">Procurando obras de arte ...</strong>
           </Row>
         </Col>
       ) : (

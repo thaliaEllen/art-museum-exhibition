@@ -25,10 +25,7 @@ function ModalArtInformation(props: any) {
       toggle={openCloseModalInformation}
       fullscreen
     >
-      <ModalHeader
-        style={{ marginBottom: "2rem" }}
-        toggle={openCloseModalInformation}
-      >
+      <ModalHeader className="titleArt" toggle={openCloseModalInformation}>
         Detalhes da obra
       </ModalHeader>
       <ModalBody>
@@ -39,9 +36,7 @@ function ModalArtInformation(props: any) {
             </div>
           </Col>
           <Col lg={6} xs={12}>
-            <div className="textInformational">
-              <strong>Título:</strong> {informationArt.caption}
-            </div>
+            <div className="titleArt">{informationArt.caption}</div>
 
             <div className="textInformational">
               <strong>Artista:</strong>{" "}
@@ -71,6 +66,11 @@ function ModalArtInformation(props: any) {
             <div className="textInformational">
               <strong>Número de Adesão:</strong>{" "}
               {informationArt.generalInfo.accessionNumber}
+            </div>
+
+            <div className="textInformational">
+              <strong>Atual localização:</strong>{" "}
+              {informationArt.generalInfo.repository}
             </div>
           </Col>
         </Row>
