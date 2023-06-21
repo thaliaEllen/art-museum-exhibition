@@ -23,10 +23,10 @@ async function SearchArtObject(listArtIds: any) {
                 ? imageNotFound
                 : value.data.primaryImage,
             width: !value.data.measurements[0].elementMeasurements.Width
-              ? 30
+              ? 10
               : value.data.measurements[0].elementMeasurements.Width,
             height: !value.data.measurements[0].elementMeasurements.Height
-              ? 30
+              ? 10
               : value.data.measurements[0].elementMeasurements.Height,
             tags: [{ value: "Domínio público", title: "Domínio público" }],
             caption: value.data.title,
@@ -39,10 +39,10 @@ async function SearchArtObject(listArtIds: any) {
                 ? imageNotFound
                 : value.data.primaryImage,
             width: !value.data.measurements[0].elementMeasurements.Width
-              ? 30
+              ? 10
               : value.data.measurements[0].elementMeasurements.Width,
             height: !value.data.measurements[0].elementMeasurements.Height
-              ? 30
+              ? 10
               : value.data.measurements[0].elementMeasurements.Height,
             caption: value.data.title,
           });
