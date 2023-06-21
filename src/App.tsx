@@ -10,7 +10,7 @@ function App() {
   const [loadList, setLoadList] = useState(false);
   return (
     <Fragment>
-      <NavbarHomepage />
+      <NavbarHomepage setListArt={setListArt} setLoadList={setLoadList} />
       <FilterInput setLoadList={setLoadList} setListArt={setListArt} />
       <GalleryPhotos loadList={loadList} listArt={listArt} />
     </Fragment>
