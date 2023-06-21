@@ -6,7 +6,15 @@
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-.imageToGallery:hover {
+.imageToGallery:active {
+    cursor: pointer;
+    opacity: 0.8;
+    color: rgb(185, 23, 23);
+    position: absolute;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.imageToGalleryFavorite {
     cursor: pointer;
     opacity: 0.8;
     color: red;
