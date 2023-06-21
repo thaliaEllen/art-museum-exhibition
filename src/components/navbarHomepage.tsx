@@ -15,6 +15,7 @@ function NavbarHomepage(props: any) {
   const favoritesList = useSelector(useFavorites);
 
   async function searchFavorites() {
+    setLoadList(true);
     const imagesId = favoritesList.map((item) => item.id);
     const lisArtObjects = await SearchArtObject(imagesId);
     setListArt(lisArtObjects);
