@@ -15,10 +15,6 @@ function ModalArtInformation(props: any) {
   const { modalInformationView, openCloseModalInformation, informationArt } =
     props;
 
-  useEffect(() => {
-    console.log(informationArt);
-  }, []);
-
   return (
     <Modal
       isOpen={modalInformationView}
@@ -50,6 +46,10 @@ function ModalArtInformation(props: any) {
               {informationArt.generalInfo.classification}
             </div>
 
+            <div className="textInformational">
+              <strong>Domínio publico:</strong>{" "}
+              {informationArt.generalInfo.isPublicDomain ? "Sim" : "Não"}
+            </div>
             <div className="textInformational">
               <strong>Meio:</strong> {informationArt.generalInfo.medium}
             </div>

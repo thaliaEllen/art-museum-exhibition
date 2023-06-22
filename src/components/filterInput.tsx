@@ -29,12 +29,13 @@ function FilterInput(props: any) {
 
   return (
     <Container className="containerFilter">
-      <Row className="titleFilter">Buscar obras de arte</Row>
+      <Row className="titleFilter">Pesquisar obras de arte</Row>
       <Row className="filterContainer">
         <Col lg={2} xs={12}>
           <FormGroup>
             <Input
               type="select"
+              className="inputFilter"
               value={typeFilterSearch}
               onChange={(e) => setTypeFilterSearch(e.target.value)}
               name="select"
@@ -49,14 +50,15 @@ function FilterInput(props: any) {
         <Col lg={5} xs={12}>
           <FormGroup>
             <Input
+              className="inputFilter"
               name="inputSearchFilter"
               onChange={(e) => setFilterSearch(e.target.value)}
             />
           </FormGroup>
         </Col>
         <Col lg={1}>
-          <Button onClick={() => filter()} color="secondary">
-            Buscar
+          <Button className="buttonFilter" onClick={() => filter()}>
+            Pesquisar
           </Button>
         </Col>
       </Row>

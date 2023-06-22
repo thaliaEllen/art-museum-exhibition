@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ThumbnailImageProps } from "react-grid-gallery";
 import { RiHeartFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +10,6 @@ import {
   useFavorites,
 } from "../../redux/sliceFavorites";
 import ModalArtInformation from "../modalArtInformation/modalArtInformation";
-import { useState } from "react";
 
 const ImageToGallery = (props: ThumbnailImageProps) => {
   const { src, alt, style, title } = props.imageProps;

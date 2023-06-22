@@ -56,7 +56,6 @@ async function SearchArtObject(listArtIds: any) {
       });
   }
 
-  console.log(listaArtObjects);
   return listaArtObjects;
 }
 
