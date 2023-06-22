@@ -10,11 +10,12 @@ import { useFavorites } from "../redux/sliceFavorites";
 import SearchArtObject from "../services/searchArtObject";
 
 function NavbarHomepage(props: any) {
-  const { setListArt, setLoadList } = props;
+  const { setListArt, setLoadList, setResults } = props;
   const { width } = useWindowDimensions();
   const favoritesList = useSelector(useFavorites);
 
   async function searchFavorites() {
+    setResults();
     setLoadList(true);
     const imagesId = favoritesList.map((item) => item.id);
     const lisArtObjects = await SearchArtObject(imagesId);

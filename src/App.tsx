@@ -14,7 +14,11 @@ function App() {
 
   return (
     <Fragment>
-      <NavbarHomepage setListArt={setListArt} setLoadList={setLoadList} />
+      <NavbarHomepage
+        setResults={setResults}
+        setListArt={setListArt}
+        setLoadList={setLoadList}
+      />
       <HomePage />
       <FilterInput
         setLoadList={setLoadList}
