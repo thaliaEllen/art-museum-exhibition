@@ -22,6 +22,14 @@ function NavbarHomepage(props: any) {
     setLoadList(false);
   }
 
+  function scrollToSearch() {
+    window.scroll({
+      top: 1500,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div>
       <Navbar color="white" expand="md" fixed="top" className="navbarContainer">
@@ -33,7 +41,11 @@ function NavbarHomepage(props: any) {
           )}
         </NavbarBrand>
         <Nav>
-          <RiSearchLine className="iconSearch" size={32} />
+          <RiSearchLine
+            onClick={() => scrollToSearch()}
+            className="iconSearch"
+            size={32}
+          />
           <div onClick={() => searchFavorites()} className="buttonFavorite">
             <RiHeartFill color="white" size={20} />
           </div>

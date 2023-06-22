@@ -29,8 +29,9 @@ function FilterInput(props: any) {
 
   return (
     <Container className="containerFilter">
+      <Row className="titleFilter">Buscar obras de arte</Row>
       <Row className="filterContainer">
-        <Col lg={2}>
+        <Col lg={2} xs={12}>
           <FormGroup>
             <Input
               type="select"
@@ -45,7 +46,7 @@ function FilterInput(props: any) {
             </Input>
           </FormGroup>
         </Col>
-        <Col lg={5}>
+        <Col lg={5} xs={12}>
           <FormGroup>
             <Input
               name="inputSearchFilter"
@@ -55,7 +56,7 @@ function FilterInput(props: any) {
         </Col>
         <Col lg={1}>
           <Button onClick={() => filter()} color="secondary">
-            Procurar
+            Buscar
           </Button>
         </Col>
       </Row>
