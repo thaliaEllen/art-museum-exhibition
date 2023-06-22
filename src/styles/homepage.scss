@@ -1,0 +1,23 @@
+.containerImageHomepage {  width: 100%;  max-height: 35rem; margin-bottom: 2rem; }
+
+.imageArtHomePage {  width: 100%;  max-height: 35rem; min-height: 5rem;  object-fit: cover;  object-position: center;}
+
+.containerHomepage {
+    margin-top: 5rem;
+}
+
+.titleHomepage {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    font-family: MetSerif,Georgia,serif;
+    font-weight: bold;
+}
+
+.subtitleHomePage {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-family: MetSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: small;
+}

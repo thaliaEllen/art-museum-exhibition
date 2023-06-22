@@ -1,0 +1,33 @@
+.filterContainer {
+    margin-bottom: 1rem;
+    padding: 1rem 5rem 1rem 5rem;
+    justify-content: center;
+}
+
+.containerFilter {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.inputFilter {
+    border-color: black;
+    border-radius: 0;
+}
+
+.buttonFilter {
+    border-radius: 0;
+    background-color: black;
+}
+
+.titleFilter {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: x-large;
+    font-family: MetSerif,Georgia,serif;
+
+
+}

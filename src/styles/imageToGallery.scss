@@ -1,0 +1,34 @@
+.imageToGallery {
+    cursor: pointer;
+    opacity: 0.5;
+    color: black;
+    position: absolute;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.imageToGallery:active {
+    cursor: pointer;
+    opacity: 0.8;
+    color: rgb(185, 23, 23);
+    position: absolute;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.imageToGalleryFavorite {
+    cursor: pointer;
+    opacity: 0.8;
+    color: red;
+    position: absolute;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.containerLoadImage {
+    justify-content: center;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.textLoad {
+    font-family: MetSans,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: large;
+}
