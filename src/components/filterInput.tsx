@@ -18,9 +18,13 @@ function FilterInput(props: any) {
       typeFilterSearch == "Local" ? true : false,
       filterSearch
     );
-    const lisArtObjects = await SearchArtObject(listArtId);
-    setListArt(lisArtObjects);
-    setLoadList(false);
+    if (!listArtId) {
+      setLoadList(false);
+    } else {
+      const lisArtObjects = await SearchArtObject(listArtId);
+      setListArt(lisArtObjects);
+      setLoadList(false);
+    }
   }
 
   return (

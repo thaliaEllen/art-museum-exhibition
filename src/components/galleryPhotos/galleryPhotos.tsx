@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Gallery } from "react-grid-gallery";
 import { Col, Row, Spinner } from "reactstrap";
 

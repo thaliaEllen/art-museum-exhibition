@@ -4,6 +4,7 @@ import "./App.css";
 import FilterInput from "./components/filterInput";
 import GalleryPhotos from "./components/galleryPhotos/galleryPhotos";
 import NavbarHomepage from "./components/navbarHomepage";
+import NotFoundArt from "./components/notFoundArt";
 
 function App() {
   const [listArt, setListArt] = useState([]);
@@ -12,7 +13,11 @@ function App() {
     <Fragment>
       <NavbarHomepage setListArt={setListArt} setLoadList={setLoadList} />
       <FilterInput setLoadList={setLoadList} setListArt={setListArt} />
-      <GalleryPhotos loadList={loadList} listArt={listArt} />
+      {!loadList && listArt.length == 0 ? (
+        <NotFoundArt />
+      ) : (
+        <GalleryPhotos loadList={loadList} listArt={listArt} />
+      )}
     </Fragment>
   );
 }
